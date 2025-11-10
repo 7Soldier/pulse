@@ -60,6 +60,7 @@ $(document).ready(()=>{
                 ourTeam: "Команда",
                 ourContacts: "Контакти",
                 Kontakt: "Контакти:",
+                "entry-word": "Робимо життя краще",
                 "short-description": `
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно успішні проекти з реальною соціальною користю.<br><br>
 
@@ -115,7 +116,7 @@ $(document).ready(()=>{
                 alex: "Oleksii",
                 misha: "Mykhailo",
                 denis: "Denis",
-                nick: "Микита"
+                nick: "Mykyta"
             },
             teamRoles: {
                 "anton-role": "Captain of the 3D design, coding and engineering",
@@ -135,6 +136,7 @@ $(document).ready(()=>{
                 ourTeam: "Team",
                 ourContacts: "Contacts",
                 Kontakt: "Contacts:",
+                "entry-word": "Making life better",
             }
 
         }
@@ -151,7 +153,7 @@ $(document).ready(()=>{
       //{ name:"marina", role:"marina-role", image:"Marina.jpg" },
         { name:"roma",   role:"roma-role",   image:"Roman.jpg" },
         { name:"denis",  role:"denis-role",  image:"Denis.jpg" },
-        { name:"nick",   role:"nick-role",   image:"makesite.jpg" },
+        { name:"nick",   role:"nick-role",   image:"" },
     ]
 
     $("#team-container").html("")
