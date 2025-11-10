@@ -112,7 +112,7 @@ $(document).ready(()=>{
                 ourTeam: "Команда",
                 ourContacts: "Контакти",
                 Kontakt: "Почта:",
-                "entry-word": "Робимо життя краще ✨",
+                "entry-word": "Думай глибше, але не ускладнюй",
                 "our-projects": "Наші проєкти",
                 "short-description": `
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
@@ -235,7 +235,7 @@ $(document).ready(()=>{
                 ourContacts: "Contacts",
                 Kontakt: "E-mail:",
                 "our-projects": "Our projects",
-                "entry-word": "Making life better ✨",
+                "entry-word": "Think deeply, but don't complicate",
                 "short-description": `
                     We are a team of students from different fields, united by a common goal: to create commercially<br>
                     successful projects with real social benefit.<br><br>
