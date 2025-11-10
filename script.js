@@ -1,14 +1,36 @@
 // функционал для разделу "Вопроси"
 document.querySelectorAll('.faq-q').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-        btn.closest('.faq-item').classList.toggle('open');
+        const faqItem = btn.closest('.faq-item');
+        const faqA = faqItem.querySelector('.faq-a');
+        
+        faqItem.classList.toggle('open');
+
+        if (faqItem.classList.contains('open')) {
+            // Устанавливаем max-height равным реальной высоте контента
+            faqA.style.maxHeight = faqA.scrollHeight + "px";
+        } else {
+            // Сбрасываем max-height для анимации закрытия
+            faqA.style.maxHeight = null;
+        }
     });
 });
 
-// функционал для карточек проектов
+// функционал для карточек проектів
 document.querySelectorAll('.project-q').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-        btn.closest('.project-card').classList.toggle('open');
+        const projectCard = btn.closest('.project-card');
+        const projectA = projectCard.querySelector('.project-a');
+        
+        projectCard.classList.toggle('open');
+
+        if (projectCard.classList.contains('open')) {
+            // Устанавливаем max-height равным реальной высоте контента
+            projectA.style.maxHeight = projectA.scrollHeight + "px";
+        } else {
+            // Сбрасываем max-height для анимации закрытия
+            projectA.style.maxHeight = null;
+        }
     });
 });
 
@@ -90,20 +112,20 @@ $(document).ready(()=>{
                 ourTeam: "Команда",
                 ourContacts: "Контакти",
                 Kontakt: "Почта:",
-                "entry-word": "Робимо життя краще",
+                "entry-word": "Робимо життя краще ✨",
                 "our-projects": "Наші проєкти",
                 "short-description": `
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
                     успішні проекти з реальною соціальною користю.<br><br>
 
                     <h4 style="margin:0;">Наші ключові принципи</h4>
-                    Конструктивність.<br>
+                    • Конструктивність.<br>
                     Відкидаєш – пропонуй. Ми цінуємо критику, яка веде до вирішення питання.<br><br>
 
-                    Відповідальність.<br>
+                    • Відповідальність.<br>
                     Кожен відповідає за власний результат. Ми довіряємо один одному і очікуємо на активність.<br><br>
 
-                    Єдність.<br>
+                    • Єдність.<br>
                     Ми одна команда. Ділимося на групи для ефективності, але завжди працюємо як єдине ціле.
                 `,
                 "pulse1-desc": `
@@ -199,18 +221,19 @@ $(document).ready(()=>{
                 ourContacts: "Contacts",
                 Kontakt: "E-mail:",
                 "our-projects": "Our projects",
-                "entry-word": "Making life better",
+                "entry-word": "Making life better ✨",
                 "short-description": `
-                    We are a team of students from different fields, united by a common goal: to create commercially successful projects with real social benefit.<br><br>
+                    We are a team of students from different fields, united by a common goal: to create commercially<br>
+                    successful projects with real social benefit.<br><br>
 
                     <h4 style="margin:0;">Our key principles:</h4>
-                    Constructivity.<br>
+                    • Constructivity.<br>
                     If you reject, suggest. We value criticism that leads to a solution.<br><br>
 
-                    Responsibility.<br>
+                    • Responsibility.<br>
                     Everyone is responsible for their own results. We trust each other and expect activity.<br><br>
 
-                    Unity.<br>
+                    • Unity.<br>
                     We are one team. We divide into groups for efficiency, but always work as a single whole.
                 `,
                 "pulse1-desc": `
