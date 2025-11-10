@@ -1,4 +1,4 @@
-// функционал для раздела "Вопросы"
+// функционал для разделу "Вопроси"
 document.querySelectorAll('.faq-q').forEach(btn=>{
     btn.addEventListener('click', ()=>{
         btn.closest('.faq-item').classList.toggle('open');
@@ -11,21 +11,44 @@ $(document).ready(()=>{
 
     var current_language = "us"
 
-    if(locale === "ua") { 
-        current_language = "ua"
-        $("#change-language").html("English")
+    const langData = {
+        us: { flag: './assets/icons/us_flag.svg', text: 'EN' },
+        ua: { flag: './assets/icons/ua_flag.svg', text: 'UA' }
+    };
+
+    function updateLangButton(lang) {
+        $('#current-lang-flag').attr('src', langData[lang].flag);
+        $('#current-lang-text').text(langData[lang].text);
     }
 
-    $("#change-language").click(() => {
-        if(current_language == "us") {
-            current_language = "ua"
-            $("#change-language").html("English")
-        } else {
-            current_language = "us"
-            $("#change-language").html("Українська")
+    if (locale.language === "uk") { 
+        current_language = "ua";
+    }
+
+    updateLangButton(current_language);
+
+    $('#language-toggle').click(() => {
+        $('.language-selector').toggleClass('open');
+    });
+
+    $('#language-options a').click(function(e) {
+        e.preventDefault();
+        const newLang = $(this).data('lang');
+        if (newLang !== current_language) {
+            current_language = newLang;
+            updateLangButton(newLang);
+            translatePage();
         }
-        translatePage()
-    })
+        $('.language-selector').removeClass('open');
+    });
+
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.language-selector').length) {
+            if ($('.language-selector').hasClass('open')) {
+                $('.language-selector').removeClass('open');
+            }
+        }
+    });
 
     const vocabulary = {
         ua: {
@@ -159,7 +182,7 @@ $(document).ready(()=>{
     for (var i of list_team_members) {
         console.log(i)
         textIfNoPhoto = i.image !== "" ? "" : "Photo"
-        imageLink = i.image !== "" ? ` style="background-image: url('/assets/photos/${i.image}');"` : ""
+        imageLink = i.image !== "" ? ` style="background-image: url('./assets/photos/${i.image}');"` : ""
         let member = `<div class="member">
                         <div class="ph"${imageLink}>
                             ${textIfNoPhoto}

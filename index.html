@@ -11,17 +11,23 @@
 
     <header id="headerid">
         <div class="nav">
-            <div class="logo">
-                <div class="logo">
-                    <img id="logoWhite" src="./assets/PulseBoW.png" alt="Pulse Logo" class="logo-img">
-                    <img id="logoBlack" src="./assets/PulseWoB.png" alt="Pulse Logo" class="logo-img" style="display: none;">
-                </div>
-            </div>
+            <a href="https://pulse-ua.studio" class="logo">
+                <img id="logoWhite" src="./assets/PulseBoW.png" alt="Pulse Logo" class="logo-img">
+                <img id="logoBlack" src="./assets/PulseWoB.png" alt="Pulse Logo" class="logo-img" style="display: none;">
+            </a>
             <nav>
                 <a id="loc-ourProj" href="#projects" class="header-links">Наши проекты</a>
-                <a id="loc-ourTeam" href="#team" class="header-links" style="margin-left:24px">Команда</a>
-                <a id="loc-ourContacts" href="#contacts" class="header-links" style="margin-left:24px">Контакты</a>
-                <a id="change-language" class="header-links unselectable" style="margin-left:32px; display: inline; cursor: pointer;">Українська</a>
+                <a id="loc-ourTeam" href="#team" class="header-links">Команда</a>
+                <a id="loc-ourContacts" href="#contacts" class="header-links">Контакты</a>
+                <div class="language-selector">
+                    <button id="language-toggle" class="header-links unselectable">
+                        <img id="current-lang-flag" src="" alt="flag" class="lang-flag"> <span id="current-lang-text"></span>
+                    </button>
+                    <div id="language-options">
+                        <a href="#" data-lang="us"><img src="./assets/icons/us_flag.svg" alt="USA Flag" class="lang-flag"> EN</a>
+                        <a href="#" data-lang="ua"><img src="./assets/icons/ua_flag.svg" alt="Ukraine Flag" class="lang-flag"> UA</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -71,6 +77,7 @@
                 
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">властелин пламени</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">менеджер</div></div></div>
+                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
@@ -131,6 +138,8 @@
             </div>
         </div>
     </footer>
+
+    <a href="#start" id="scrollToTopBtn" title="Вернуться к началу">↑</a>
 
     <script type="importmap">
         {

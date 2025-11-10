@@ -16,6 +16,79 @@ img{max-width:100%;display:block}
 
 .header-links {
     font-weight:600;
+    transition: color .2s ease, background-color .2s ease;
+    padding: 8px 16px;
+    border-radius: 99px;
+}
+
+.header-down .header-links:hover {
+    color: var(--light);
+    background-color: rgba(255,255,255,.1);
+}
+
+.header-links:hover {
+    color: var(--brand);
+    background-color: rgba(150, 70, 255, 0.1);
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+#language-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#language-options {
+    display: none;
+    position: absolute;
+    background-color: var(--card);
+    min-width: 120px;
+    box-shadow: var(--shadow);
+    z-index: 1;
+    border-radius: 12px;
+    padding: 6px;
+    left: 0;
+    border: 1px solid rgba(2,6,23,.08);
+}
+
+#language-options a {
+    font-weight: 600;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    transition: background-color .2s ease, color .2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+#language-options a:hover {
+    background-color: rgba(150, 70, 255, 0.1);
+    color: var(--brand);
+}
+
+.lang-flag {
+    width: 20px;
+    height: 14px;
+    border-radius: 3px;
+    object-fit: cover;
+    border: 1px solid rgba(2,6,23,.08);
+}
+
+.language-selector.open #language-options {
+    display: block;
 }
 
 .unselectable {
@@ -52,6 +125,10 @@ header {
 }
 
 .nav{max-width:1200px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between}
+.nav nav {
+    display: flex;
+    gap: 8px;
+}
 .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; color:#1e293b; font-size:22px}
 .logo-dot{width:14px;height:14px;border-radius:50%;background:var(--brand);display:inline-block}
 .nav a.btn{padding:10px 16px; border:1px solid rgba(2,6,23,.08); border-radius:12px; background:#fff; font-weight:600}
@@ -113,7 +190,11 @@ section{padding:68px 0}
 .team{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:16px}
 @media (max-width:1100px){ .team{grid-template-columns:repeat(4,1fr)} }
 @media (max-width:700px){ .team{grid-template-columns:repeat(2,1fr)} }
-.member{background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:18px; overflow:hidden; box-shadow:var(--shadow)}
+.member{background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:18px; overflow:hidden; box-shadow:var(--shadow); transition: transform .2s ease, box-shadow .2s ease;}
+.member:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(2,6,23,.30);
+}
 
 .member .ph{
     aspect-ratio:1/1.25; 
@@ -148,6 +229,32 @@ footer{padding:28px 0 56px; background:#0b1220; color:#cbd5e1; margin-top:36px}
 .pill{background:#111827; padding:10px 14px; border-radius:999px; display:inline-flex; gap:10px; align-items:center; border:1px solid rgba(255,255,255,.08)}
 .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#111827;color:#e5e7eb;border:1px solid rgba(255,255,255,.1);font-size:13px}
 
+/* Кнопка "наверх" */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: var(--brand);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 28px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: background-color .3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #7b25eb; /* немного темнее */
+}
 
 /* Фикс для мобилок */
 @media (max-width: 640px) {
