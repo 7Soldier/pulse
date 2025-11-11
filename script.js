@@ -195,10 +195,10 @@ $(document).ready(()=>{
                 "faq3-a": "Зараз ми працюємо в менеджменті, екології, економіці, програмуванні та інженерії, але відкриті до нових напрямків та учасників.",
                 "faq4-q": "Які у вас цінності?",
                 "faq4-a": "Об'єктивність, цілеспрямованість, вміння брати на себе відповідальність і великий інтерес до нового.",
-                "puls1name": "Пульс 1",
-                "puls2name": "Пульс 2",
-                "puls3name": "Проєкт «Варшава»",
-                "puls4name": "Скоро…",
+                "pulse1name": "Пульс 1",
+                "pulse2name": "Пульс 2",
+                "pulse3name": "Проєкт «Варшава»",
+                "pulse4name": "Скоро…",
                 "team-logo": "Команда"
             }
         },
@@ -314,10 +314,10 @@ $(document).ready(()=>{
                 "faq3-a": "Currently, we work in management, ecology, economics, programming, and engineering, but we are open to new directions and members.",
                 "faq4-q": "What are your values?",
                 "faq4-a": "Objectivity, determination, ability to take responsibility, and a strong interest in new things.",
-                "puls1name": "Puls 1",
-                "puls2name": "Puls 2",
-                "puls3name": "«Warszawa» project",
-                "puls4name": "Soon…",
+                "pulse1name": "Pulse 1",
+                "pulse2name": "Pulse 2",
+                "pulse3name": "«Warszawa» project",
+                "pulse4name": "Soon…",
                 "team-logo": "Team"
             }
 
