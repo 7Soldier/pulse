@@ -198,6 +198,8 @@ $(document).ready(()=>{
                     Ідея створення філії іноземної компанії не була у нас першою у списку всіх ідей. З тим, як ми заглиблювалися в початковий концепт, дізнаючись про його недоліки, ідея з філією виникала все частіше. Врешті-решт вона стала основною, тому що початкова ідея була приведена до висновку "Компанії з модульними будинками і так роблять з 0 і повну установку, а значить, унікальність і синергія загубилися.<br><br>
 
                     Про відповіді на запитання "А саме як так вийшло?" йде далі.
+
+                    <img src="assets/content/house_pulse3.jpg"><br>
                 `,
                 "pulse4-desc":`<img style="border-radius: 1em;" src="assets/content/soon_ua.PNG">`,
                 "faq-title": "Найпоширеніші питання",
@@ -311,6 +313,8 @@ $(document).ready(()=>{
                     We have already analyzed that the key components, such as turbines and generators, are produced in Ukraine. We even developed a calculation concept for how to properly place such CHPs so that it is as rational as possible.
                 `,
                 "pulse3-desc": `
+                    <img src="assets/content/house_pulse3.jpg"><br>
+                    
                     While preparing for Rebuild Ukraine, the team had an idea: "What if we design a project specifically for the companies that will be there?" So all 12 of us started thinking: "What unites most companies?" After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
 
                     The idea of creating a branch of a foreign company was not at the top of our list of ideas. As we delved deeper into the original concept and discovered its shortcomings, the branch idea came up more and more often. Eventually, it became our main focus because the original idea led to the conclusion: "Companies with modular houses already do everything from zero to full installation themselves, which means uniqueness and synergy were lost."<br><br>
