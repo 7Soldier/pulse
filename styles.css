@@ -594,17 +594,18 @@ footer {
     header .nav {
         display: grid;
         grid-template-columns: auto auto;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         gap: 16px;
     }
 
     header nav {
-        grid-column: 1 / -1;
-        justify-self: center;
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto;
         flex-wrap: wrap;
         justify-content: center;
+        justify-self: end;
         gap: 8px;
     }
 
