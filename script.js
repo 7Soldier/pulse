@@ -201,7 +201,10 @@ $(document).ready(() => {
 
                     Все просто: через війну у нас зруйновано близько 80% ТЕС та ТЕЦ. Якщо замість кількох великих станцій створити децентралізовану мережу з великої кількості маленьких, модульних ТЕЦ, то вся енергосистема стане набагато стійкішою до атак. Плюс, це реальна можливість підтримати економіку країни через експорт. Ми можемо використати наші переваги – нижчу собівартість виробництва та наявність крутих інженерів.<br><br>
 
-                    Ми вже проаналізували, що ключові компоненти, як-от турбіни та генератори, виробляються в Україні. Навіть розробили концепцію розрахунку, як правильно розміщувати такі ТЕЦ, щоб це було максимально раціонально.
+                    Ми вже проаналізували, що ключові компоненти, як-от турбіни та генератори, виробляються в Україні. Навіть розробили концепцію розрахунку, як правильно розміщувати такі ТЕЦ, щоб це було максимально раціонально.<br><br>
+                    
+                    <img src="assets/content/pulse2img1.png">
+                    <img src="assets/content/pulse2img2.png">
                 `,
                 "pulse3-desc": `
                     <img style="border-radius: 1.25em" src="assets/content/house_pulse3.jpg"><br>
@@ -320,7 +323,10 @@ $(document).ready(() => {
 
                     It's simple: because of the war, about 80% of our TPPs and CHPs have been destroyed. If instead of a few large plants, we create a decentralized network of a large number of small, modular CHPs, then the entire energy system will become much more resilient to attacks. Plus, this is a real opportunity to support the country's economy through exports. We can use our advantages – lower production cost and the availability of cool engineers.<br><br>
 
-                    We have already analyzed that the key components, such as turbines and generators, are produced in Ukraine. We even developed a calculation concept for how to properly place such CHPs so that it is as rational as possible.
+                    We have already analyzed that the key components, such as turbines and generators, are produced in Ukraine. We even developed a calculation concept for how to properly place such CHPs so that it is as rational as possible.<br><br>
+                    
+                    <img src="assets/content/pulse2img1.png">
+                    <img src="assets/content/pulse2img2.png">
                 `,
                 "pulse3-desc": `
                     <img style="border-radius: 1.25em" src="assets/content/house_pulse3.jpg"><br>
