@@ -399,8 +399,7 @@ $(document).ready(() => {
 
                     We have already analyzed that the key components, such as turbines and generators, are produced in Ukraine. We even developed a calculation concept for how to properly place such CHPs so that it is as rational as possible.<br><br>
                     
-                    <img src="assets/content/pulse2img1.png">
-                    <img src="assets/content/pulse2img2.png">
+                    <img src="assets/content/pulse2img_scheme.png">
                 `,
                 "pulse3-desc": `
                     <img style="border-radius: 1.25em" src="assets/content/house_pulse3.jpg"><br>
