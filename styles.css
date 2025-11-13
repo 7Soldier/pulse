@@ -328,6 +328,7 @@ header {
 .project-a .inner {
     padding: 0 18px 18px 18px;
     color: #334155;
+    line-height: 1.6;
 }
 
 .project-card.open .project-q .arrow {
@@ -335,11 +336,11 @@ header {
 }
 
 .project-card.open .project-a {
-    max-height: 1000px;
+    max-height: 5000px;
 }
 
 .project-footer {
-    padding: 18px;
+    padding: 18px 18px 24px 18px;
     border-top: 1px solid var(--border-color);
     margin-top: 18px;
 }
@@ -358,6 +359,7 @@ header {
     transition: background-color .3s;
     border: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-learn-more:hover {

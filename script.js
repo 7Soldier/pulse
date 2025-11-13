@@ -16,7 +16,9 @@ const initAccordion = (triggerSelector, containerClass, contentClass) => {
                 // Используем двойной requestAnimationFrame для гарантии применения стилей
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
-                        content.style.maxHeight = `${content.scrollHeight}px`;
+                        // Используем больший запас для узких экранов
+                        const padding = window.innerWidth < 768 ? 80 : 40;
+                        content.style.maxHeight = `${content.scrollHeight + padding}px`;
                     });
                 });
             }
@@ -27,6 +29,79 @@ const initAccordion = (triggerSelector, containerClass, contentClass) => {
 // Инициализация аккордеонов
 initAccordion('.faq-q', '.faq-item', '.faq-a');
 initAccordion('.project-q', '.project-card', '.project-a');
+
+// Функция для пересчёта высоты всех открытых аккордеонов
+const recalculateOpenAccordions = () => {
+    // Сбрасываем max-height для правильного пересчёта scrollHeight
+    document.querySelectorAll('.project-card.open').forEach(card => {
+        const content = card.querySelector('.project-a');
+        if (content) {
+            content.style.maxHeight = 'none';
+        }
+    });
+
+    document.querySelectorAll('.faq-item.open').forEach(item => {
+        const content = item.querySelector('.faq-a');
+        if (content) {
+            content.style.maxHeight = 'none';
+        }
+    });
+
+    // Пересчитываем после рендеринга
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            // Пересчитываем карточки проектов
+            document.querySelectorAll('.project-card.open').forEach(card => {
+                const content = card.querySelector('.project-a');
+                if (content) {
+                    // Используем больший запас для узких экранов
+                    const padding = window.innerWidth < 768 ? 80 : 40;
+                    content.style.maxHeight = `${content.scrollHeight + padding}px`;
+                }
+            });
+
+            // Пересчитываем FAQ
+            document.querySelectorAll('.faq-item.open').forEach(item => {
+                const content = item.querySelector('.faq-a');
+                if (content) {
+                    const padding = window.innerWidth < 768 ? 80 : 40;
+                    content.style.maxHeight = `${content.scrollHeight + padding}px`;
+                }
+            });
+        });
+    });
+};
+
+// Обработчик изменения размера окна с debounce
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        recalculateOpenAccordions();
+    }, 150);
+});
+
+// Обработчик изменения ориентации устройства
+window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+        recalculateOpenAccordions();
+    }, 200);
+});
+
+// Отслеживание загрузки изображений в открытых аккордеонах
+document.addEventListener('DOMContentLoaded', () => {
+    // Отслеживаем загрузку всех изображений
+    const images = document.querySelectorAll('.project-a img, .faq-a img');
+    images.forEach(img => {
+        if (img.complete) {
+            recalculateOpenAccordions();
+        } else {
+            img.addEventListener('load', () => {
+                recalculateOpenAccordions();
+            });
+        }
+    });
+});
 
 // Конфигурация языков
 const LANGUAGES = {
@@ -203,8 +278,7 @@ $(document).ready(() => {
 
                     Ми вже проаналізували, що ключові компоненти, як-от турбіни та генератори, виробляються в Україні. Навіть розробили концепцію розрахунку, як правильно розміщувати такі ТЕЦ, щоб це було максимально раціонально.<br><br>
                     
-                    <img src="assets/content/pulse2img1.png">
-                    <img src="assets/content/pulse2img2.png">
+                    <img src="assets/content/pulse2img_scheme_ua.png">
                 `,
                 "pulse3-desc": `
                     <img style="border-radius: 1.25em" src="assets/content/house_pulse3.jpg"><br>
@@ -430,6 +504,17 @@ $(document).ready(() => {
                 }
             }
         }
+
+        // Пересчитываем высоту для открытых аккордеонов после перевода
+        // Используем небольшую задержку для полной загрузки изображений и перерисовки
+        setTimeout(() => {
+            recalculateOpenAccordions();
+        }, 100);
+
+        // Дополнительный пересчёт через большую задержку на случай медленной загрузки
+        setTimeout(() => {
+            recalculateOpenAccordions();
+        }, 500);
     };
     
     translatePage();
